@@ -1,28 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-	<meta charset="UTF-8">
+	<head> <!-- indication entête -->
+	<title>Mimie Myosothis</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Mimie Myosothis, les aventures d'une petites écureuil">
+	<meta name="author" content="émilie">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	</head>
-	<body>
-		<img src="images/photo_mimie.png">
+
+	<body> <!-- contenu entier du site -->
+		<!-- Wrapper-->
+			<div id="wrapper" class="tall" style="padding-top: 148px; opacity: 1">
+		
+		<header> <!-- introduction -->
+			<img src="images/photo_mimie.png" class="image"alt="portrait Mimie">
+		</header>
+		
+		<!-- texte -->
 		<h1 class="titre"> Mimie Myosotis</h1>
+
 		<p class="texte courant"> Mimie c'est elle, le petit écureuil sur la branche. Elle est rousse comme les feuilles en automne et elle a les yeux noisettes.</p> 
 
 		<p>Elle vit dans la forêt vosgienne et sa maison est perchée dans un épicéa. 
 			<br/>Dans son village d'écureuils, toutes les maisons sont perchées. 
 			<br/>Il y a ceux qui se déplacent en sautant comme mimie et pour les moins vaillants, il y a quand même des passerelles (ben ouai).</p>
 		
-		<p>Petite, elle a tellement fait de bons qu’elle s’est perdue. Ses parents ont eu tres peur alors ils lui ont racontés que derrière la clairière c’était la Chine ! 
+		<p>Petite, elle a tellement fait de bons qu’elle s’est perdue. Ses parents ont eu très peur alors ils lui ont racontés que derrière la clairière c’était la Chine ! 
 			<br/>oui oui la Chine !
 			<br/>Mais alors, peut être que si elle regardait depuis la branche de sa maison elle verrait passer des écureuils à chapeaux pointus ?!</p>
 		
 		<p>Mimie, elle adoooore être dans les arbres, elle peut voir loin. 
-			<br/>Des fois, elle s’installe sur une branche avec un livre et des noisettes à grignoter.
-			<br/> Elle est vive et curieuse mais elle ne s’éloigne jamais trop des arbres de son village.</p> 
+			<br/>Des fois, elle s’installe sur une branche avec un livre et des noisettes à grignoter. 
 		
 		<p>Plus tard, elle va comprendre que le monde est bien plus grand que la forêt où elle vit,  tellement plus grand ! 
 			<br/>Elle part à l’aventure, à la rencontre d’autres petits écureuils et même d’autres animaux.  Elle devient reporter (comme Tintin) et voyage partout dans le monde.</p>
 
+			<!-- Formulaire de contact -->
+		<h2 class="contact">Contactez Mimie</h2>
+	
+		<p>formulaire de contact</p>
+	 	<!-- Contact
+	 	<form>
+	  		<form method="post" action="merci.html">
+			<p><label for="nom">Nom </label> : <input type="text" name="nom" id="nom"></p>
+			<p><label for="prénom">Prénom </label> : <input type="text" name="prénom" id="prénom"></p>
+			<p><label for="email">Adresse email </label> : <input type="text" name="email" id="email"></p>
+			<p><label for="message">Message</label><br></p>
+			<textarea name="message" id="message" rows="10" cols="50"></textarea>
+			<br><input type="submit" value="Envoyer" name="Envoyer">
+		</form> -->
+
+		 <form id="contact" method="post" action="traitement_formulaire.php">
+         	<fieldset><legend>Vos coordonnées</legend>
+         	    <p><label for="nom">Nom :</label><input type="text" id="nom" name="nom" tabindex="1" /></p>
+         	    <p><label for="email">Email :</label><input type="text" id="email" name="email" tabindex="2" /></p>
+         	</fieldset>
+      	
+         	<fieldset><legend>Votre message :</legend>
+         	    <p><label for="objet">Objet :</label><input type="text" id="objet" name="objet" tabindex="3" /></p>
+         	    <p><label for="message">Message :</label><textarea id="message" name="message" tabindex="4" cols="30" rows="8"></textarea></p>
+         	</fieldset>
+      	
+         	<div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer le formulaire !" /></div>
+        </form>
+    
+
+
+	<!-- pied de page -->	
+	<footer>
+		<div id="footer">
+			<ul class="icons">
+				<p>suivez les aventures de Mimie sur les réseaux</p>
+						<li><a href="https://www.facebook.com/MimieMyosothis/" target="_blank" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/MimieMyosothis/?hl=fr" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="emilie.q@codeur.online" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+			
+
+
+						<ul class="copyright">
+							<li>&copy; 2018 Emilie Q </li>
+						</ul>
+					
+					</div>
+
+	</footer> 
+	</div>
 	</body>
-</html>
+
+
+
 
