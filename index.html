@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head> <!-- indication entête -->
+<head> <!-- indication entête -->
 	<title>Mimie Myosothis</title>
 	<meta charset="utf-8">
 	<meta name="description" content="Mimie Myosothis, les aventures d'une petites écureuil">
 	<meta name="author" content="émilie">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	</head>
+</head>
 
-	<body> <!-- contenu entier du site -->
-		<!-- Wrapper-->
-			<div id="wrapper" class="tall" style="padding-top: 148px; opacity: 1">
+<body> <!-- contenu entier du site -->
+	<!-- Wrapper-->
+	<div id="wrapper" class="tall" style="padding-top: 148px; opacity: 1">
 		
 		<header> <!-- introduction -->
 			<img src="images/photo_mimie.png" alt="portrait Mimie" class="logo">
@@ -25,21 +25,20 @@
 		<p>Elle vit dans la forêt vosgienne et sa maison est perchée dans un épicéa. 
 			<br/>Dans son village d'écureuils, toutes les maisons sont perchées. 
 			<br/>Il y a ceux qui se déplacent en sautant comme mimie et pour les moins vaillants, il y a quand même des passerelles (ben ouai).</p>
-		
+
 		<p>Petite, elle a tellement fait de bons qu’elle s’est perdue. Ses parents ont eu très peur alors ils lui ont racontés que derrière la clairière c’était la Chine ! 
-			<br/>oui oui la Chine !
-			<br/>Mais alors, peut être que si elle regardait depuis la branche de sa maison elle verrait passer des écureuils à chapeaux pointus ?!</p>
-		
+		<br/>oui oui la Chine !
+		<br/>Mais alors, peut être que si elle regardait depuis la branche de sa maison elle verrait passer des écureuils à chapeaux pointus ?!</p>
+
 		<p>Mimie, elle adoooore être dans les arbres, elle peut voir loin. 
 			<br/>Des fois, elle s’installe sur une branche avec un livre et des noisettes à grignoter. 
-		
+
 		<p>Plus tard, elle va comprendre que le monde est bien plus grand que la forêt où elle vit,  tellement plus grand ! 
 			<br/>Elle part à l’aventure, à la rencontre d’autres petits écureuils et même d’autres animaux.  Elle devient reporter (comme Tintin) et voyage partout dans le monde.</p>
 
-			<!-- Formulaire de contact -->
-		<h2 class="contact">Contactez Mimie</h2>
-	
-		<p>formulaire de contact</p>
+	<!-- Formulaire de contact -->
+	<h2 class="contact">Contactez Mimie</h2>
+	<p>Formulaire de contact</p>
 	 	<!-- Contact
 	 	<form>
 	  		<form method="post" action="merci.html">
@@ -49,46 +48,91 @@
 			<p><label for="message">Message</label><br></p>
 			<textarea name="message" id="message" rows="10" cols="50"></textarea>
 			<br><input type="submit" value="Envoyer" name="Envoyer">
-		</form> -->
-
-		 <form id="contact" method="post" action="traitement_formulaire.php">
-         	<fieldset><legend>Vos coordonnées</legend>
-         	    <p><label for="nom">Nom :</label><input type="text" id="nom" name="nom" tabindex="1" /></p>
-         	    <p><label for="email">Email :</label><input type="text" id="email" name="email" tabindex="2" /></p>
-         	</fieldset>
-      	
-         	<fieldset><legend>Votre message :</legend>
-         	    <p><label for="objet">Objet :</label><input type="text" id="objet" name="objet" tabindex="3" /></p>
-         	    <p><label for="message">Message :</label><textarea id="message" name="message" tabindex="4" cols="30" rows="8"></textarea></p>
-         	</fieldset>
-      	
-         	<div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer le formulaire !" /></div>
-        </form>
-    
+		</form> 
 
 
-	<!-- pied de page -->	
+
+
+	<form id="contact" method="post" action="traitement_formulaire.php">
+		<fieldset><legend>Vos coordonnées</legend>
+			<p><label for="nom">Nom :</label><input type="text" id="nom" name="nom"tabindex="1" /></p>
+			<p><label for="email">Email :</label><input type="text" id="email" name"email" tabindex="2" /></p>
+		</fieldset>
+		<fieldset><legend>Votre message :</legend>
+			<p><label for="objet">Objet :</label><input type="text" id="objet" name"objet" tabindex="3" /></p>
+			<p><label for="message">Message :</label><textarea id="message" name=message" tabindex="4" cols="30" rows="8"></textarea></p>
+		</fieldset>
+		<div style="text-align:center;"><input type="submit" name="envoi" value=Envoyer le formulaire !" /></div>
+	</form> -->
+
+
+<form id="contact" method="post" action="traitement_formulaire.php">
+	<fieldset><legend>Vos coordonnées</legend>
+		
+		<p>
+			<label for="nom">Entrez vos nom et prénom:</label>
+			<input type="text" id="nom" name="nom" tabindex="1" maxlength="25" required />
+			<span id="missNom"></span>
+		</p>
+		<br>
+		<p>
+			<label for="email">Entrez votre mail:</label>
+			<input type="email" id="email" name="email" tabindex="2" required />
+			<span id="missEmail"></span>
+		</p>
+		
+		</fieldset>
+	<fieldset><legend>Votre message</legend>
+		<p>
+			<label for="objet">Objet :</label>
+			<input type="text" id="objet" name="objet" tabindex="3"  maxlength="25" required/>
+			<span id="missObjet"></span>
+		</p>
+		<br>
+		<p>
+			<label for="message">Message :</label>
+
+			<textarea id="message" name="message" tabindex="4" cols="30" rows="8" required></textarea>
+			<span id="missMessage"></span>
+		</p>
+	</fieldset>
+		<div style="text-align:center;">
+			<input id="bouton_envoi" type="submit" name="envoi" value="Envoyez le formulaire !" />
+		</div>
+	</form>
+
+<script src="formulaire.js"></script>
+
+
+
+
+
+
+
+   
+
+
+
+<!-- pied de page -->	
 	<footer>
 		<div id="footer">
 			<ul class="icons">
 				<p>suivez les aventures de Mimie sur les réseaux</p>
-						<li><a href="https://www.facebook.com/MimieMyosothis/" target="_blank" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/MimieMyosothis/?hl=fr" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="emilie.q@codeur.online" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-			
-
-
-						<ul class="copyright">
-							<li>&copy; 2018 Emilie Q </li>
-						</ul>
-					
-					</div>
+				<li><a href="https://www.facebook.com/MimieMyosothis/" target=_blank" class="icon alt fa-facebook"><span class="label">Facebook<span></a></li>
+				<li><a href="https://www.instagram.com/MimieMyosothis/?hl=fr" targe="_blank" class="icon alt fa-instagram"><span class="label"Instagram</span></a></li>
+				<li><a href="emilie.q@codeur.online" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; La bande à Mimie 2018</li>
+			</ul>
+		</div>
 
 	</footer> 
-	</div>
-	</body>
 
+
+
+	</body>
+</div>
 
 
 
